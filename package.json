@@ -20,6 +20,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "19.2.3",
     "react-intersection-observer": "^10.0.3",
+    "react-parallax-tilt": "^1.7.319",
     "three": "^0.183.2"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Tilt from "react-parallax-tilt";
 
 const GOLD = "#c9a86c";
 const GOLD_LIGHT = "#e8c98a";
@@ -102,46 +103,23 @@ const packages = [
 ];
 
 function Card3D({ children, style, className }: any) {
-    const ref = useRef<HTMLDivElement>(null);
-    const [rot, setRot] = useState({ x: 0, y: 0 });
-    const [hovered, setHovered] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(hover: none)").matches);
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-        return () => window.removeEventListener("resize", checkMobile);
-    }, []);
-
-    const handleMove = (e: any) => {
-        if (isMobile) return;
-        const el = ref.current;
-        if (!el) return;
-        const rect = el.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        setRot({ x: -y * 10, y: x * 10 });
-    };
-
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
     return (
-        <div
-            ref={ref}
-            onMouseMove={handleMove}
-            onMouseEnter={() => !isMobile && setHovered(true)}
-            onMouseLeave={() => { if (!isMobile) { setHovered(false); setRot({ x: 0, y: 0 }); } }}
-            style={{
-                transform: hovered
-                    ? `perspective(800px) rotateX(${rot.x}deg) rotateY(${rot.y}deg) translateY(-6px) scale(1.01)`
-                    : "perspective(800px) rotateX(0) rotateY(0) translateY(0) scale(1)",
-                transition: hovered ? "transform 0.1s ease-out" : "transform 0.5s cubic-bezier(0.16,1,0.3,1)",
-                willChange: hovered ? "transform" : "auto",
-                ...style,
-            }}
+        <Tilt
+            tiltMaxAngleX={6}
+            tiltMaxAngleY={6}
+            glareEnable={true}
+            glareMaxOpacity={0.08}
+            glareColor="#C9A84C"
+            glarePosition="all"
+            scale={1.02}
+            transitionSpeed={500}
+            tiltEnable={!isMobile}
             className={className}
+            style={style}
         >
             {children}
-        </div>
+        </Tilt>
     );
 }
 
@@ -199,6 +177,12 @@ function PriceDisplay({ original, sale }: any) {
     useEffect(() => {
         const el = containerRef.current;
         if (!el || target === 0) return;
+
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+            if (numRef.current) numRef.current.innerText = target.toString();
+            return;
+        }
 
         const observer = new IntersectionObserver(
             ([entry]) => {

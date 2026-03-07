@@ -7,9 +7,16 @@ import { TiltCardWrapper } from "./Animations";
 
 export const ServiceCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
     <TiltCardWrapper>
-        <div className="group p-8 border border-gray-100 bg-white hover:border-[var(--color-gold)] transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-2 rounded-xl">
-            <div className="w-12 h-12 flex items-center justify-center bg-[var(--color-gold)]/10 rounded-lg mb-6 text-[var(--color-gold)] group-hover:bg-[var(--color-gold)] group-hover:text-white transition-colors duration-300">
-                {icon}
+        <div className="service-card group p-8 border border-gray-100 bg-white hover:border-[var(--color-gold)] transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-2 rounded-xl">
+            <div className="service-icon-wrapper mb-6">
+                <div className="service-icon-inner">
+                    <div className="service-icon-front w-12 h-12">
+                        {icon}
+                    </div>
+                    <div className="service-icon-back">
+                        CONVERTS<br />VISITORS
+                    </div>
+                </div>
             </div>
             <h3 className="font-serif text-xl font-bold mb-3">{title}</h3>
             <p className="text-gray-500 leading-relaxed">{description}</p>
@@ -21,30 +28,23 @@ export const ServiceCard = ({ icon, title, description }: { icon: React.ReactNod
 
 export const PortfolioCard = ({ image, title, category, description }: { image: string, title: string, category: string, description?: string }) => (
     <TiltCardWrapper>
-        <Link href="/portfolio" className="block group cursor-pointer rounded-xl overflow-hidden relative">
-            <div className="relative h-72 md:h-96 w-full overflow-hidden">
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Dark gradient overlay from bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <Link href="/portfolio" className="block portfolio-card w-full h-72 md:h-96">
+            <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover"
+            />
+            <div className="portfolio-overlay">
+                <span className="text-xs uppercase tracking-widest text-[var(--color-gold)] font-bold mb-2 block">
+                    {category}
+                </span>
+                <h3 className="font-serif text-2xl font-bold mb-1 text-white">{title}</h3>
+                {description && <p className="text-gray-300 text-sm line-clamp-2">{description}</p>}
 
-                {/* Text overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-                    <span className="text-xs uppercase tracking-widest text-[var(--color-gold)] font-bold mb-2 block">
-                        {category}
-                    </span>
-                    <h3 className="font-serif text-2xl font-bold mb-1">{title}</h3>
-                    {description && <p className="text-gray-300 text-sm line-clamp-2">{description}</p>}
-
-                    {/* Gold arrow that slides in from left on hover */}
-                    <div className="flex items-center gap-2 mt-3 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                        <span className="text-[var(--color-gold)] text-lg font-bold">→</span>
-                        <span className="text-sm text-[var(--color-gold)] font-display uppercase tracking-widest">View Project</span>
-                    </div>
+                <div className="flex items-center gap-2 mt-3 text-[var(--color-gold)]">
+                    <span className="portfolio-arrow text-lg font-bold">→</span>
+                    <span className="text-sm font-display uppercase tracking-widest">View Project</span>
                 </div>
             </div>
         </Link>
@@ -55,7 +55,7 @@ export const TestimonialCard = ({ quote, name, business }: { quote: string, name
     const initials = name.split(" ").map(n => n[0]).join("").toUpperCase();
 
     return (
-        <TiltCardWrapper className="h-full">
+        <TiltCardWrapper className="h-full testimonial-card">
             <div className="p-8 bg-white border-l-4 border-[var(--color-gold)] flex flex-col h-full shadow-sm rounded-r-xl relative overflow-hidden">
                 {/* Large quotation mark */}
                 <div className="absolute top-4 right-6 text-8xl font-serif text-[var(--color-gold)]/10 leading-none select-none pointer-events-none">
