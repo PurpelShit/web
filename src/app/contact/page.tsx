@@ -71,8 +71,8 @@ export default function Contact() {
 
                             <div>
                                 <span className="block text-sm uppercase tracking-widest text-[var(--color-gold)] font-bold mb-2">Email Us</span>
-                                <a href="mailto:hello@100dinar.com" className="text-xl font-bold hover:text-[var(--color-gold)] transition-colors">
-                                    hello@100dinar.com
+                                <a href="mailto:hello@the100dinarcompany.live" className="text-xl font-bold hover:text-[var(--color-gold)] transition-colors">
+                                    hello@the100dinarcompany.live
                                 </a>
                             </div>
 

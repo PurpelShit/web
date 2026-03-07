@@ -105,8 +105,17 @@ function Card3D({ children, style, className }: any) {
     const ref = useRef<HTMLDivElement>(null);
     const [rot, setRot] = useState({ x: 0, y: 0 });
     const [hovered, setHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(hover: none)").matches);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     const handleMove = (e: any) => {
+        if (isMobile) return;
         const el = ref.current;
         if (!el) return;
         const rect = el.getBoundingClientRect();
@@ -119,13 +128,14 @@ function Card3D({ children, style, className }: any) {
         <div
             ref={ref}
             onMouseMove={handleMove}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => { setHovered(false); setRot({ x: 0, y: 0 }); }}
+            onMouseEnter={() => !isMobile && setHovered(true)}
+            onMouseLeave={() => { if (!isMobile) { setHovered(false); setRot({ x: 0, y: 0 }); } }}
             style={{
                 transform: hovered
                     ? `perspective(800px) rotateX(${rot.x}deg) rotateY(${rot.y}deg) translateY(-6px) scale(1.01)`
                     : "perspective(800px) rotateX(0) rotateY(0) translateY(0) scale(1)",
                 transition: hovered ? "transform 0.1s ease-out" : "transform 0.5s cubic-bezier(0.16,1,0.3,1)",
+                willChange: hovered ? "transform" : "auto",
                 ...style,
             }}
             className={className}
@@ -155,8 +165,9 @@ function StarField() {
     const [stars, setStars] = useState<any[]>([]);
 
     useEffect(() => {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
         setStars(
-            Array.from({ length: 80 }, () => ({
+            Array.from({ length: isMobile ? 30 : 80 }, () => ({
                 x: Math.random() * 100,
                 y: Math.random() * 100,
                 s: Math.random() * 1.5 + 0.3,
@@ -181,24 +192,41 @@ function StarField() {
 }
 
 function PriceDisplay({ original, sale }: any) {
-    const [counted, setCounted] = useState(0);
-    const ref = useRef<HTMLDivElement>(null);
+    const numRef = useRef<HTMLSpanElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const target = sale ?? 0;
 
     useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
+        const el = containerRef.current;
+        if (!el || target === 0) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    let start = 0;
-                    const step = () => {
-                        start += Math.ceil(target / 30);
-                        if (start >= target) { setCounted(target); return; }
-                        setCounted(start);
-                        requestAnimationFrame(step);
+                    let startTime: number | null = null;
+                    const duration = 1200; // 1.2s animation
+
+                    const step = (timestamp: number) => {
+                        if (!startTime) startTime = timestamp;
+                        const progress = Math.min((timestamp - startTime) / duration, 1);
+
+                        // Ease out quart
+                        const easeOut = 1 - Math.pow(1 - progress, 4);
+                        const currentVal = Math.floor(easeOut * target);
+
+                        // Update DOM directly bypassing React render cycle 
+                        if (numRef.current) {
+                            numRef.current.innerText = currentVal.toString();
+                        }
+
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else if (numRef.current) {
+                            numRef.current.innerText = target.toString();
+                        }
                     };
                     requestAnimationFrame(step);
+                    observer.disconnect(); // Only animate once
                 }
             },
             { threshold: 0.5 }
@@ -214,21 +242,23 @@ function PriceDisplay({ original, sale }: any) {
     );
 
     return (
-        <div ref={ref} style={{ lineHeight: 1 }}>
+        <div ref={containerRef} style={{ lineHeight: 1 }}>
             <div style={{ fontSize: 11, color: TEXT_DIM, textDecoration: "line-through", marginBottom: 2, letterSpacing: 1 }}>
                 {original} BHD
             </div>
             <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
-                <span style={{
-                    fontSize: 48,
-                    fontWeight: 800,
-                    background: `linear-gradient(135deg, ${GOLD_LIGHT}, ${GOLD}, ${GOLD_DARK})`,
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    letterSpacing: -2,
-                    lineHeight: 1,
-                }}>
-                    {counted}
+                <span
+                    ref={numRef}
+                    style={{
+                        fontSize: 48,
+                        fontWeight: 800,
+                        background: `linear-gradient(135deg, ${GOLD_LIGHT}, ${GOLD}, ${GOLD_DARK})`,
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        letterSpacing: -2,
+                        lineHeight: 1,
+                    }}>
+                    0
                 </span>
                 <span style={{ fontSize: 14, color: GOLD, fontWeight: 500 }}>BHD</span>
                 <span style={{
