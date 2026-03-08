@@ -482,7 +482,7 @@ export default function Pricing() {
 
                                     {/* CTA */}
                                     <a
-                                        href={pkg.sale === null ? "/contact" : "https://wa.me/919999999999"}
+                                        href={pkg.sale === null ? "/contact" : "https://wa.me/918218699398"}
                                         target={pkg.sale === null ? "_self" : "_blank"}
                                         rel="noopener noreferrer"
                                         style={{
@@ -559,7 +559,7 @@ export default function Pricing() {
                         </div>
                     </div>
                     <a
-                        href="https://wa.me/919999999999"
+                        href="https://wa.me/918218699398"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{

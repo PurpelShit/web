@@ -72,7 +72,7 @@ export default function RefundPolicy() {
                         <p className="mb-4">If you believe you are eligible for a refund, please contact us within <strong>7 days</strong> of the issue arising:</p>
                         <p className="mb-4">
                             <strong>Email:</strong> <a href="mailto:hello@the100dinarcompany.live" className="text-[var(--color-gold)] hover:underline">hello@the100dinarcompany.live</a><br />
-                            <strong>WhatsApp:</strong> <a href="https://wa.me/919999999999" className="text-[var(--color-gold)] hover:underline">+91 9999999999</a>
+                            <strong>WhatsApp:</strong> <a href="https://wa.me/918218699398" className="text-[var(--color-gold)] hover:underline">+91 8218699398</a>
                         </p>
                         <p>Include your name, project details, and reason for the refund request. We will respond within 2 business days.</p>
                     </section>

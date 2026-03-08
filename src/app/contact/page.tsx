@@ -68,9 +68,9 @@ export default function Contact() {
                         <div className="space-y-8">
                             <div>
                                 <span className="block text-sm uppercase tracking-widest text-[var(--color-gold)] font-bold mb-2">WhatsApp / Phone</span>
-                                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-[#25D366] transition-colors">
+                                <a href="https://wa.me/918218699398" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-[#25D366] transition-colors">
                                     <WhatsAppIcon className="w-6 h-6 text-[#25D366]" />
-                                    +91 9999999999
+                                    +91 8218699398
                                 </a>
                             </div>
 

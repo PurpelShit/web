@@ -70,7 +70,7 @@ export default function About() {
             <Section bg="gold" className="text-center">
                 <div className="max-w-2xl mx-auto">
                     <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Let&apos;s build something great.</h2>
-                    <Link href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://wa.me/918218699398" target="_blank" rel="noopener noreferrer">
                         <Button size="lg" className="bg-[#25D366] text-white hover:bg-[#20bd5a] text-lg border-none hover:text-white transition-all shadow-xl gap-3">
                             <WhatsAppIcon className="w-6 h-6" /> Chat with our Founder
                         </Button>
