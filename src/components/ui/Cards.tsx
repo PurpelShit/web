@@ -5,7 +5,7 @@ import { Button } from "./Button";
 import Link from "next/link";
 import { TiltCardWrapper } from "./Animations";
 
-export const ServiceCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
+export const ServiceCard = ({ icon, title, description, hoverText }: { icon: React.ReactNode, title: string, description: string, hoverText?: React.ReactNode }) => (
     <TiltCardWrapper>
         <div className="service-card group p-8 border border-gray-100 bg-white hover:border-[var(--color-gold)] transition-all duration-300 h-full shadow-sm hover:shadow-lg hover:-translate-y-2 rounded-xl">
             <div className="service-icon-wrapper mb-6">
@@ -14,7 +14,7 @@ export const ServiceCard = ({ icon, title, description }: { icon: React.ReactNod
                         {icon}
                     </div>
                     <div className="service-icon-back">
-                        CONVERTS<br />VISITORS
+                        {hoverText || <>CONVERTS<br />VISITORS</>}
                     </div>
                 </div>
             </div>

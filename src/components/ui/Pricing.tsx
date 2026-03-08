@@ -482,7 +482,7 @@ export default function Pricing() {
 
                                     {/* CTA */}
                                     <a
-                                        href={pkg.sale === null ? "/contact" : "https://wa.me/918218699398"}
+                                        href={pkg.sale === null ? "/contact" : "https://wa.me/919999999999"}
                                         target={pkg.sale === null ? "_self" : "_blank"}
                                         rel="noopener noreferrer"
                                         style={{
@@ -559,7 +559,7 @@ export default function Pricing() {
                         </div>
                     </div>
                     <a
-                        href="https://wa.me/918218699398"
+                        href="https://wa.me/919999999999"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -602,12 +602,12 @@ export default function Pricing() {
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                     {[
                         {
-                            name: "Starter Hosting", sale: 17, original: 50, unit: "/ month",
+                            name: "Basic Hosting", sale: 9, original: 50, unit: "/ month", yearly: "80 BHD / year", free: "2 months free",
                             features: ["Enterprise Global CDN", "Free SSL Certificate", "99.9% Uptime Guarantee", "Basic Monthly Backups"],
                         },
                         {
-                            name: "Professional Hosting", sale: 59, original: 100, unit: "/ month",
-                            features: ["Everything in Starter", "Daily Automated Backups", "Priority Security Patching", "5× Technical Support / month", "Advanced Traffic Analytics"],
+                            name: "Standard Hosting", sale: 21, original: 100, unit: "/ month", yearly: "230 BHD / year", free: "2 months free",
+                            features: ["Everything in Basic", "Daily Automated Backups", "Priority Security Patching", "5× Technical Support / month", "Advanced Traffic Analytics"],
                         },
                     ].map((plan, i) => (
                         <Card3D key={i}>
@@ -636,6 +636,16 @@ export default function Pricing() {
                                             <span style={{ fontSize: 26, fontWeight: 800, color: GOLD, lineHeight: 1 }}>{plan.sale}</span>
                                             <span style={{ fontSize: 11, color: TEXT_DIM }}>{plan.unit}</span>
                                         </div>
+                                        {(plan as any).yearly && (
+                                            <div style={{ fontSize: 10, color: TEXT_DIM, marginTop: 4 }}>
+                                                or <span style={{ color: GOLD_LIGHT, fontWeight: 600 }}>{(plan as any).yearly}</span>
+                                            </div>
+                                        )}
+                                        {(plan as any).free && (
+                                            <div style={{ fontSize: 10, color: "#4ade80", fontWeight: 600, marginTop: 2 }}>
+                                                ({(plan as any).free})
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>

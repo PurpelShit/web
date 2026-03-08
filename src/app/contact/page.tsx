@@ -24,10 +24,15 @@ export default function Contact() {
         }
 
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch("https://formspree.io/f/mqeyazne", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
+                body: JSON.stringify({
+                    name: data.name,
+                    business: data.businessName,
+                    phone: data.phone,
+                    message: data.message
+                }),
             });
 
             if (!response.ok) {
@@ -63,9 +68,9 @@ export default function Contact() {
                         <div className="space-y-8">
                             <div>
                                 <span className="block text-sm uppercase tracking-widest text-[var(--color-gold)] font-bold mb-2">WhatsApp / Phone</span>
-                                <a href="https://wa.me/918218699398" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-[#25D366] transition-colors">
+                                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-[#25D366] transition-colors">
                                     <WhatsAppIcon className="w-6 h-6 text-[#25D366]" />
-                                    +91 8218699398
+                                    +91 9999999999
                                 </a>
                             </div>
 

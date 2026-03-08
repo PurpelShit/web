@@ -23,7 +23,7 @@ export const Footer = () => {
                         <p className="text-gray-500 max-w-sm mb-6 leading-relaxed">
                             We build fast, beautiful, conversion-focused websites for businesses everywhere — starting at just 100 BHD.
                         </p>
-                        <Link href="https://wa.me/918218699398" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
                             <Button variant="outline" size="sm" className="gap-2">
                                 <WhatsAppIcon className="w-4 h-4 text-[#25D366]" /> Chat with us
                             </Button>
