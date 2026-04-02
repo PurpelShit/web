@@ -62,7 +62,7 @@ export default function Contact() {
                     <div className="bg-gray-50 p-10 md:p-14 h-full flex flex-col justify-center">
                         <h3 className="font-serif text-3xl font-bold mb-6">Direct Contact</h3>
                         <p className="text-gray-600 mb-10 leading-relaxed text-lg">
-                            We highly recommend reaching out via WhatsApp for the fastest response time. We&apos;re online 7 days a week, ready to help businesses across India digitize.
+                            We highly recommend reaching out via WhatsApp for the fastest response time. We&apos;re online 7 days a week, ready to help businesses across Bahrain digitize.
                         </p>
 
                         <div className="space-y-8">
@@ -84,7 +84,7 @@ export default function Contact() {
                             <div>
                                 <span className="block text-sm uppercase tracking-widest text-[var(--color-gold)] font-bold mb-2">Location</span>
                                 <p className="text-xl font-bold text-gray-900">
-                                    New Delhi, India
+                                    Manama, Bahrain
                                 </p>
                             </div>
                         </div>

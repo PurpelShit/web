@@ -130,7 +130,7 @@ export default function TermsOfService() {
                     <section>
                         <h2 className="text-2xl font-bold text-[#C9A84C] mb-4">10. Contact Us</h2>
                         <p><strong>Email:</strong> <a href="mailto:hello@the100dinarcompany.live" className="text-[var(--color-gold)] hover:underline">hello@the100dinarcompany.live</a><br />
-                            <strong>Location:</strong> New Delhi, India</p>
+                            <strong>Location:</strong> Manama, Bahrain</p>
                     </section>
                 </div>
             </Section>

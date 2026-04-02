@@ -32,7 +32,7 @@ const greatVibes = Great_Vibes({
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "The 100 Dinar Company | Premium Websites in India",
+  title: "The 100 Dinar Company | Premium Websites in Bahrain",
   description: "We build fast, beautiful, conversion-focused websites for businesses everywhere — starting at just 100 BHD.",
   openGraph: {
     title: "The 100 Dinar Company",

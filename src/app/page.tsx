@@ -40,7 +40,7 @@ export default function Home() {
 
           <Reveal delay={0.5}>
             <p className="font-display text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Affordable, fast, and built for businesses across India.
+              Affordable, fast, and built for businesses across Bahrain.
               No tech skills needed — just results.
             </p>
           </Reveal>
@@ -128,7 +128,7 @@ export default function Home() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <PortfolioCard
               image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop&q=80"
               title="Brewed & Co."
@@ -158,7 +158,7 @@ export default function Home() {
       <Section className="overflow-hidden">
         <Reveal>
           <SectionHeader
-            title="Trusted by India's Best"
+            title="Trusted by Bahrain's Best"
             subtitle="Swipe through to see what our local partners have to say."
           />
         </Reveal>

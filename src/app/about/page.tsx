@@ -10,13 +10,13 @@ export default function About() {
             <Section className="pb-10 pt-10">
                 <SectionHeader
                     title="Our Story"
-                    subtitle="Helping businesses across India thrive in the digital age without breaking the bank."
+                    subtitle="Helping businesses across Bahrain thrive in the digital age without breaking the bank."
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-12 max-w-6xl mx-auto">
                     <div className="order-2 md:order-1 space-y-6 text-gray-600 leading-relaxed text-lg">
                         <p>
-                            We realized something was broken in the agency space. Local businesses across India were paying too much — or settling for cheap templates that didn&apos;t convert. That&apos;s why we started The 100 Dinar Company.
+                            We realized something was broken in the agency space. Local businesses across Bahrain were paying too much — or settling for cheap templates that didn&apos;t convert. That&apos;s why we started The 100 Dinar Company.
                         </p>
                         <p className="font-serif italic text-2xl text-[var(--color-foreground)] border-l-4 border-[var(--color-gold)] pl-6 my-8">
                             Pay an agency 1,500+ BHD and wait months, or use a cheap DIY builder and look unprofessional.
@@ -39,7 +39,7 @@ export default function About() {
                                 priority
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-8">
-                                <span className="text-white font-serif text-2xl font-bold">Based in New Delhi, India.</span>
+                                <span className="text-white font-serif text-2xl font-bold">Based in Manama, Bahrain.</span>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function About() {
                     <div>
                         <div className="text-5xl font-serif text-[var(--color-gold)] mb-4 font-bold">3.</div>
                         <h4 className="text-xl font-bold text-[var(--color-foreground)] mb-3">Local Expertise</h4>
-                        <p>We understand the Indian market. We build what works here, including localized SEO and WhatsApp integrations.</p>
+                        <p>We understand the Bahraini market. We build what works here, including localized SEO and WhatsApp integrations.</p>
                     </div>
                 </div>
             </Section>

@@ -56,7 +56,7 @@ export const Footer = () => {
                         <h4 className="font-serif font-bold text-lg mb-4">Contact</h4>
                         <ul className="space-y-3 text-gray-500">
                             <li><Link href="/contact" className="hover:text-[var(--color-gold)] transition">Contact Form</Link></li>
-                            <li>New Delhi, India</li>
+                            <li>Manama, Bahrain</li>
                             <li><a href="mailto:hello@the100dinarcompany.live" className="hover:text-[var(--color-gold)] transition">hello@the100dinarcompany.live</a></li>
                         </ul>
                     </div>

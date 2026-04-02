@@ -67,7 +67,7 @@ export default function Services() {
                         <div>
                             <h3 className="font-serif text-3xl font-bold mb-4">Hosting & Maintenance</h3>
                             <p className="text-gray-600 mb-6 leading-relaxed">
-                                A website needs a home and regular upkeep to stay secure. We take care of everything behind the scenes. We deploy your site on Enterprise-grade CDN networks so it loads instantly in India and across the globe. Never worry about an SSL certificate expiring again.
+                                A website needs a home and regular upkeep to stay secure. We take care of everything behind the scenes. We deploy your site on Enterprise-grade CDN networks so it loads instantly in Bahrain and across the globe. Never worry about an SSL certificate expiring again.
                             </p>
                             <ul className="space-y-3 mb-8">
                                 {["Enterprise-grade Global CDN Storage", "Free SSL Certificates", "Automated Daily Backups", "99.9% Uptime Guarantee"].map((item, i) => (

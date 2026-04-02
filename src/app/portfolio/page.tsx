@@ -39,7 +39,7 @@ export default function Portfolio() {
             <Section className="pb-10 pt-10">
                 <SectionHeader
                     title="Featured Work"
-                    subtitle="A selection of premium websites we've built for businesses across India."
+                    subtitle="A selection of premium websites we've built for businesses across Bahrain."
                 />
 
                 <div className="space-y-32 mt-20 max-w-6xl mx-auto">
