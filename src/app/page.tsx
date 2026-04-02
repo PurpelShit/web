@@ -131,27 +131,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <PortfolioCard
               image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop&q=80"
-              title="Dosari Café"
-              category="Hospitality"
-              description="A warm, inviting digital presence matching their cozy Mumbai location."
+              title="Brewed & Co."
+              category="Café & Hospitality"
+              description="A rich, dark-themed digital experience with dynamic menus and direct ordering."
             />
             <PortfolioCard
-              image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=80"
-              title="Bloom Boutique"
-              category="Retail"
-              description="A chic e-commerce experience for premium floral arrangements."
+              image="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&auto=format&fit=crop&q=80"
+              title="Ember & Ash"
+              category="Specialty Coffee"
+              description="Cinematic dark-luxury website highlighting slow-roasting craft and premium beans."
             />
             <PortfolioCard
-              image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop&q=80"
-              title="Al Dana Restaurant"
-              category="Dining"
-              description="High-end dining website with seamless reservation flow."
-            />
-            <PortfolioCard
-              image="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80"
-              title="Zayani Properties"
-              category="Real Estate"
-              description="Modern property listings with an elegant, trust-building layout."
+              image="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&auto=format&fit=crop&q=80"
+              title="The Grind Collective"
+              category="Community Hub"
+              description="An editorial-style platform built for creative circles and networking events."
             />
           </div>
         </Reveal>
@@ -172,24 +166,19 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <Carousel>
               <TestimonialCard
-                quote="Honestly didn't expect this quality at this price. They built our website in less than 2 days and it looks better than cafes I've seen in Dubai."
-                name="Ahmed Al Dosari"
-                business="Dosari Café, Mumbai"
+                quote="The team at 100 Dinar delivered a site that perfectly reflects our brand's warmth. Our online orders increased by 55% in the first month alone."
+                name="Marco Rossi"
+                business="Brewed & Co."
               />
               <TestimonialCard
-                quote="Very professional team. They understood exactly what I wanted without me having to explain too much. The AI assistant is a game changer."
-                name="Fatima Hassan"
-                business="Bloom Boutique, Delhi"
+                quote="Our new website is cinematic and truly premium. It's rare to find a team that understands specialty coffee craft as well as they do."
+                name="Elena Vance"
+                business="Ember & Ash"
               />
               <TestimonialCard
-                quote="I was skeptical at first because the price seemed too low for what they were offering. But they delivered everything they promised."
-                name="Khalid Al Mannai"
-                business="Mannai Auto Parts, Bangalore"
-              />
-              <TestimonialCard
-                quote="The 100 Dinar Company understood our brand immediately. The site they built converted 3 leads into clients in the first month. ROI was immediate."
-                name="Noor Al Zayani"
-                business="Zayani Real Estate, Hyderabad"
+                quote="They built more than just a website; they built a community hub. Our membership grew by 70% thanks to their storytelling approach."
+                name="Julian Thorne"
+                business="The Grind Collective"
               />
             </Carousel>
           </div>

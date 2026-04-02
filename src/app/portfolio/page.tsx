@@ -6,42 +6,6 @@ import { Button } from "@/components/ui/Button";
 export default function Portfolio() {
     const projects = [
         {
-            title: "Dosari Café",
-            category: "Hospitality & Dining",
-            image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop",
-            challenge: "Dosari Café needed a way to showcase their unique coffee blends and ambient space while allowing customers to find them easily in Mumbai.",
-            solution: "We built a warm, visually striking 3-page website with a Google Maps integration and a dynamic menu layout. We also integrated a WhatsApp floating widget which increased their direct delivery inquiries by 40% in the first week.",
-            link: "/contact",
-            isLive: false
-        },
-        {
-            title: "Bloom Boutique",
-            category: "Retail & E-commerce",
-            image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop",
-            challenge: "A premium floral shop in Delhi struggling to convert Instagram followers into actual sales due to a lack of a proper catalog.",
-            solution: "We deployed a full e-commerce experience using our Premium package. It includes an inventory management system, pristine image galleries, and an AI chat assistant trained to suggest floral arrangements based on customer questions.",
-            link: "/contact",
-            isLive: false
-        },
-        {
-            title: "Al Dana Restaurant",
-            category: "Fine Dining",
-            image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop",
-            challenge: "A high-end restaurant looking for a sophisticated brand presence online without relying entirely on third-party aggregation apps.",
-            solution: "Created a dark-mode inspired, elegant one-pager featuring a seamless direct reservation flow. The website perfectly captures their luxurious atmosphere while providing functional booking tools.",
-            link: "/contact",
-            isLive: false
-        },
-        {
-            title: "Zayani Real Estate",
-            category: "Real Estate & Property",
-            image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
-            challenge: "A boutique real estate firm in Hyderabad that needed a fast, credible way to showcase high-value properties to international investors.",
-            solution: "Developed a structural, professional corporate site with dedicated property listing pages. We prioritized heavy SEO optimization and an integrated CRM lead capture form.",
-            link: "/contact",
-            isLive: false
-        },
-        {
             title: "Brewed & Co.",
             category: "Café & Hospitality",
             image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop",
