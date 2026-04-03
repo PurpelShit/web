@@ -38,7 +38,7 @@ export function CookieConsent() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 40 }}
                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                    className="fixed bottom-6 left-6 z-[9999] max-w-sm w-[calc(100vw-3rem)] sm:w-sm"
+                    className="fixed bottom-6 left-6 z-[500] max-w-sm w-[calc(100vw-3rem)] sm:w-sm"
                     role="dialog"
                     aria-label="Cookie consent"
                     aria-live="polite"
