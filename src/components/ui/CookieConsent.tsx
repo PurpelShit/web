@@ -43,18 +43,18 @@ export function CookieConsent() {
                     aria-label="Cookie consent"
                     aria-live="polite"
                 >
-                    {/* Card */}
+                    {/* Card — light cream so the dark cursor ring stays visible */}
                     <div
                         className="relative overflow-hidden"
                         style={{
-                            background: "#1c1917",
-                            border: "1px solid rgba(201, 168, 76, 0.25)",
+                            background: "#FAF7F2",
+                            border: "1px solid rgba(201, 168, 76, 0.30)",
                             borderRadius: "4px",
                             padding: "28px 28px 24px",
-                            boxShadow: "0 24px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,168,76,0.08)",
+                            boxShadow: "0 20px 60px rgba(28,25,23,0.12), 0 4px 16px rgba(28,25,23,0.08)",
                         }}
                     >
-                        {/* Subtle gold gradient accent strip at top */}
+                        {/* Gold gradient accent strip at top */}
                         <div
                             style={{
                                 position: "absolute",
@@ -74,7 +74,7 @@ export function CookieConsent() {
                                     fontFamily: "var(--font-serif)",
                                     fontSize: "1.1rem",
                                     fontWeight: 700,
-                                    color: "#FAF7F2",
+                                    color: "#1c1917",
                                     letterSpacing: "-0.02em",
                                     margin: 0,
                                 }}
@@ -88,7 +88,7 @@ export function CookieConsent() {
                             style={{
                                 fontFamily: "var(--font-sans)",
                                 fontSize: "0.85rem",
-                                color: "rgba(250, 247, 242, 0.6)",
+                                color: "rgba(28, 25, 23, 0.62)",
                                 lineHeight: 1.6,
                                 marginBottom: "20px",
                             }}
@@ -97,9 +97,10 @@ export function CookieConsent() {
                             <Link
                                 href="/privacy-policy"
                                 style={{
-                                    color: "#c9a84c",
+                                    color: "#b39239",
                                     textDecoration: "underline",
                                     textUnderlineOffset: "2px",
+                                    fontWeight: 600,
                                 }}
                             >
                                 Learn more
@@ -147,9 +148,9 @@ export function CookieConsent() {
                                     flex: 1,
                                     height: "40px",
                                     borderRadius: "2px",
-                                    border: "1px solid rgba(201, 168, 76, 0.35)",
+                                    border: "1px solid rgba(28, 25, 23, 0.25)",
                                     background: "transparent",
-                                    color: "rgba(250, 247, 242, 0.55)",
+                                    color: "rgba(28, 25, 23, 0.55)",
                                     fontFamily: "var(--font-display)",
                                     fontSize: "0.78rem",
                                     fontWeight: 700,
@@ -159,13 +160,13 @@ export function CookieConsent() {
                                     transition: "border-color 0.2s, color 0.2s, transform 0.15s",
                                 }}
                                 onMouseEnter={(e) => {
-                                    (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(201,168,76,0.7)";
-                                    (e.currentTarget as HTMLButtonElement).style.color = "rgba(250,247,242,0.9)";
+                                    (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(28,25,23,0.5)";
+                                    (e.currentTarget as HTMLButtonElement).style.color = "rgba(28,25,23,0.85)";
                                     (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-1px)";
                                 }}
                                 onMouseLeave={(e) => {
-                                    (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(201,168,76,0.35)";
-                                    (e.currentTarget as HTMLButtonElement).style.color = "rgba(250,247,242,0.55)";
+                                    (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(28,25,23,0.25)";
+                                    (e.currentTarget as HTMLButtonElement).style.color = "rgba(28,25,23,0.55)";
                                     (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)";
                                 }}
                             >
