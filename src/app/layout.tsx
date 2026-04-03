@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { SmoothScroller } from "@/components/ui/SmoothScroller";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
@@ -91,6 +92,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <FloatingWhatsApp />
+          <CookieConsent />
         </SmoothScroller>
       </body>
     </html>
